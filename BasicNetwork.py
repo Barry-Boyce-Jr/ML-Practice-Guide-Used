@@ -20,12 +20,12 @@ print(M1)
 M1(x)
 print(M1(x))
 
-M2 = nn.Linear(8,1,bias=False) #creates matrix 2 which will be chained with matrix 1. #takes in a 8 dimensionla vector and returns a 1 dimensional vector. No bias. 
+M2 = nn.Linear(8,1,bias=False) #creates matrix 2 which will be chained with matrix 1. #takes in a 8 dimensional vector and returns a 1 dimensional vector. No bias. 
 M2(M1(x))
 print(M2(M1(x)))
 print(M2(M1(x)).shape)
 
-print(M2(M1(x)).squeeze()) #This removes the uneeded dimension so that the shape of the tensor better resembles the desired output of y (which is all in one line, not multiple)
+print(M2(M1(x)).squeeze()) #This removes the unneeded dimension so that the shape of the tensor better resembles the desired output of y (which is all in one line, not multiple)
 print(M2(M1(x)).squeeze().shape)
 
 
@@ -45,8 +45,9 @@ f = MyNeuralNet()
 for par in f.parameters():
     print(par)
 
-# givees prediciton from x data, hwoever, at the moment its not accurate. So we must adjust the weights, by using teh loss function
+# gives prediction from x data, however, at the moment its not accurate. So we must adjust the weights, by using the loss function
 prediction = f(x)
+print("Prediction from x data: ")
 print(prediction)
 
 loss = nn.MSELoss()
@@ -69,11 +70,11 @@ print("Plot:")
 plt.plot(losses)
 plt.ylabel('Loss')
 plt.xlabel('Epochs/Iterations')
-plt.show() #plot for the loss as the nueral network is ran each time 
+plt.show() #plot for the loss as the neural network is ran each time 
 
 #Now here are the predictions of the model
 print(f(x))
 # VS. the actual results
 print(y)
 
-# the results are not exact and are actually not too close, but they are as close as the model could predict for the simple data and neural netowrk given. As networks and data get more complicated the more accurate the model can predict.
+# the results are not exact and are actually not too close, but they are as close as the model could predict for the simple data and neural network given. As networks and data get more complicated the more accurate the model can predict.

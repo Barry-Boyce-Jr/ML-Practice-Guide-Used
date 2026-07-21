@@ -1,0 +1,32 @@
+
+Loss Function: (Takes difference between predicted values and true values)
+L(y,ŷ) = Σ(yᵢ-ŷᵢ)²  
+         i
+
+Old Model: f(x) = A₂A₁x     (where A is a matrix. This model really only multiplies one matrix by x bc A₁ times A₂ is B (a new singular matrix))
+
+New Model: f₂(x) = A₂R(A₁x)  (Where R is an "activation function")
+                              R(X) = {x x>0}
+                                     {0 x≤0}
+
+New Model 2: f₃(x) = A₂R(A₁x + b₁)+b₂
+
+New Model 3: f₄(x) = A₃R(A₂R(A₁x+b₁)+b₂)
+
+Basic Steps 
+1. Take data
+2. Create Matrices
+3. Shape Matrices
+4. Create Neural Network
+5. Adjust the parameters via loss function 
+6. Compare results
+
+
+
+
+
+Superscript Alphabet:   ᵃ ᵇ ᶜ ᵈ ᵉ ᶠ ᵍ ʰ ⁱ ʲ ᵏ ˡ ᵐ ⁿ ᵒ ᵖ ʳ ˢᵗ ᵘ ᵛ ʷ ˣ ʸ ᶻ
+Subscript Alphabet:     ₐ ₑ ₕ ᵢ ⱼ ₖ ₗ ₘ ₙ ₒ ₚ ᵣ ₛ ₜ ᵤ ᵥ ₓ
+
+Superscript Values:     ¹²³⁴⁵⁶⁷⁸⁹⁰
+Subscript Values:       ₀₁₂₃₄₅₆₇₈₉
