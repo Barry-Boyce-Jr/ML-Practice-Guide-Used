@@ -44,9 +44,9 @@ b = np.array([3,4])
 print("product = ", a*b)
 
 # Broadcasting Rules: 
-# Arrays are able to be multiplied, divided, added, subtracted if their dimnesions are equal, or of they follow the
+# Arrays are able to be multiplied, divided, added, subtracted if their dimensions are equal, or of they follow the
 # broadcasting rules which are 
-# 1. Theay are equal 
+# 1. They are equal 
 # 2. One of them is 1
 # Example that can be multiplied: 
 # Shape 1: (3,1,8)
